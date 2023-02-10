@@ -3,8 +3,14 @@ import random
 
 class Insect:
 
-    def __init__(self, wings, legs, flight):
-        self.default_insect = wings = 2, legs = 4
+    def __init__(self):
+        self.wings = 2
+        self.legs = 4
+        self.length_of_flight = 0
 
-    def length_of_flight(self):
-        if random.randint(0, 10)
+    def miles_flown(self):
+        self.length_of_flight = random.randint(1, 10)
+    
+    def get_length_of_flight(self):
+        return self.length_of_flight
+        
