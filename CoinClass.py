@@ -9,7 +9,7 @@ class Coin:
     # sideup data attribute with 'Heads'.
 
     def __init__(self):  # think of self as the instance that you are working with
-        self.sideup = 'Heads'  # attribute initialized to 'Heads'
+        self.__sideup = 'Heads'  # attribute initialized to 'Heads' (two underscores makes the attribute private)
 
     # The toss method generates a random number
     # in the range of 0 through 1. If the number
@@ -18,9 +18,9 @@ class Coin:
 
     def toss(self):  # mutator/set method (can change value of attribute)
         if random.randint(0, 1) == 0:
-            self.sideup = 'Heads'
+            self.__sideup = 'Heads'
         else:
-            self.sideup = 'Tails'
+            self.__sideup = 'Tails'
             # separate these two methods because (methods should do one thing at a time)
             # we might want just the value without tossing
             # 6 attributes = 6 set and 6 get methods
@@ -28,4 +28,4 @@ class Coin:
     # referenced by sideup.
 
     def get_sideup(self):  # get/accessor method (returns value of attribute)
-        return self.sideup
+        return self.__sideup
