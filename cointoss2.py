@@ -1,3 +1,4 @@
+#other methods can use class methods
 import CoinClass as c
 
 def show_coin_status(coin_obj):
@@ -11,3 +12,4 @@ my_coin = c.Coin()
 show_coin_status(my_coin)
 flip(my_coin) 
 show_coin_status(my_coin)
+
